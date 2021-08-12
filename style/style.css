@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 2rem 1rem;
+}
+
+/**** STRUCTURE CONTAINER****/
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "content";
+}
+
+.header {
+    grid-area: header;
+}
+
+.header-description {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-content: start;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: grid;
+    gap: 1rem;
+}
+
+.content {
+    grid-area: content;
+}
+
+.material-icons {
+    grid-row: span 2;
+}
+
+/**** HEADER ****/
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+blockquote {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.75rem;
+    margin: 0 0.75rem;
+}
+
+.header-text {
+    margin: 0;
+}
+
+figure {
+    margin: 1.5rem 0;
+}
+
+figure img {
+
+    width: 100%;
+    height: 100%;
+}
+
+/****SIDEBAR ****/
+.sidebar-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.625rem;
+}
+
+.sidebar-content:nth-of-type(1) {
+    color: #F2994A;
+}
+
+.sidebar-content p {
+    margin: 0 0.30rem;
+}
+
+.sidebar-content-time {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+}
+
+.material-icons {
+    grid-row: span 2;
+}
+
+.sidebar-time-title {
+    text-transform: uppercase;
+    color: #BDBDBD;
+}
+
+/**** CONTENT ****/
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-top: 1.875rem;
+
+}
+
+h2:nth-of-type(2) {
+    font-size: 1.5rem;
+
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 2.25rem 0 0 0;
+}
+
+.content-checkbox {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+}
+
+input[type="checkbox"] {
+    width: 1.3125rem;
+    height: 1.3125rem;
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1.4375rem;
+}
+
+.content-description {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.content-description p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.content-description-number {
+    display: flex;
+    justify-content: center;
+    background-color: #F2994A;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 0.375rem;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+}
+
+
+
+
+/**** MATERIAL ICONS GOOGLE ****/
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/**** RESPONSIVE DESKTOP ****/
+
+@media(min-width:720px) {
+    .container {
+        grid-template:
+            "header header"
+            "content sidebar"
+            / 1fr 1fr;
+    }
+
+}
