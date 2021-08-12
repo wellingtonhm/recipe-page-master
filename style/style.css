@@ -31,6 +31,10 @@ body {
 .sidebar {
     grid-area: sidebar;
     display: grid;
+}
+
+.container-sidebar{
+    display: grid;
     gap: 1rem;
 }
 
@@ -177,8 +181,18 @@ h3 {
     min-height: 2.25rem;
 }
 
+/**** FOOTER ****/
 
+.copyright-create {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #BDBDBD;
+    text-align: center;
 
+}
 
 /**** MATERIAL ICONS GOOGLE ****/
 
@@ -208,14 +222,60 @@ h3 {
     font-feature-settings: 'liga';
 }
 
+
+
 /**** RESPONSIVE DESKTOP ****/
 
-@media(min-width:720px) {
+@media(min-width:760px) {
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 3.25rem;
+        max-width: 970px;
+        align-items: center;
+    }
+    
     .container {
         grid-template:
             "header header"
             "content sidebar"
-            / 1fr 1fr;
+            / 3fr 1fr;
+        gap: 5rem;
     }
 
+    .content{
+        grid-template-columns: 2fr;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+        gap: 2.625rem;
+        align-content: start;
+        justify-items: center;
+        
+        
+    }
+
+    .sidebar-content {
+        grid-template-columns: 1fr;
+        gap: 2.625rem;
+    }
+
+    .container-sidebar{
+        padding: 3.75rem 2.5rem;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    /**** HEADER ****/
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    blockquote {
+        font-size: 0.875rem;
+    }
 }
