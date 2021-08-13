@@ -242,7 +242,7 @@ h3 {
             "header header"
             "content sidebar"
             / 3fr 1fr;
-        gap: 5rem;
+        gap: 1rem 5rem;
     }
 
     .content{
@@ -261,6 +261,7 @@ h3 {
     .sidebar-content {
         grid-template-columns: 1fr;
         gap: 2.625rem;
+        font-size: 0.625rem;
     }
 
     .container-sidebar{
@@ -278,4 +279,10 @@ h3 {
     blockquote {
         font-size: 0.875rem;
     }
+
+     /**** CONTENT ****/
+
+     h2 {
+         font-size: 1.5rem;
+     }
 }
